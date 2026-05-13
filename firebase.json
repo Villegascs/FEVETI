@@ -4,7 +4,11 @@
     "ignore": [
       "firebase.json",
       "**/.*",
-      "**/node_modules/**"
+      "**/node_modules/**",
+      "sanity-feveti/**",
+      "firebase-debug.log",
+      ".git/**",
+      "*.map"
     ]
   }
 }
