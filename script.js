@@ -116,12 +116,31 @@ setTimeout(initHeroAnimation, 100);
 // RESULTS ACCORDION SYSTEM
 // ============================================
 function initResultsAccordion() {
-    // Rely exclusively on inline HTML onclick to toggle accordions to avoid double-firing.
-}
-document.addEventListener('DOMContentLoaded', initResultsAccordion);
-// Fallback if loaded late
-initResultsAccordion();
+    const headers = document.querySelectorAll('.accordion-header');
+    headers.forEach(header => {
+        const item = header.parentElement;
+        const content = item.querySelector('.accordion-content');
 
+        // Si el acordeón ya está activo por defecto en el HTML, abrirlo
+        if (item.classList.contains('active')) {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+
+        // Usamos onclick en lugar de addEventListener para evitar que se ejecute dos veces y se anule
+        header.onclick = function() {
+            if (item.classList.contains('active')) {
+                item.classList.remove('active');
+                content.style.maxHeight = null; // Quita el max-height inline para que la transición CSS cierre
+            } else {
+                item.classList.add('active');
+                content.style.maxHeight = content.scrollHeight + "px"; // Aplica el alto exacto para animación fluida
+            }
+        };
+    });
+}
+
+// Ejecutar inmediatamente (ya que el script está al final del body)
+initResultsAccordion();
 
 // ============================================
 // MOBILE NAVIGATION SYSTEM
