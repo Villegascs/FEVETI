@@ -944,7 +944,7 @@ body.home-page .mobile-menu-btn {
 .accordion-item {
     background: #fff;
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     overflow: hidden;
     border: 1px solid #eaeaea;
 }
@@ -1082,21 +1082,29 @@ body.home-page .mobile-menu-btn {
     text-align: right;
     white-space: nowrap;
 }
+
 /* ============================================ */
 /* LENIS SMOOTH SCROLLING                     */
 /* ============================================ */
-html.lenis, html.lenis body {
-  height: auto;
+html.lenis,
+html.lenis body {
+    height: auto;
 }
+
 .lenis.lenis-smooth {
-  scroll-behavior: auto !important;
+    scroll-behavior: auto !important;
 }
+
 .lenis.lenis-smooth [data-lenis-prevent] {
-  overscroll-behavior: contain;
+    overscroll-behavior: contain;
 }
+
 .lenis.lenis-stopped {
-  overflow: hidden;
+    overflow: hidden;
 }
+
 .lenis.lenis-smooth iframe {
-  pointer-events: none;
+    pointer-events: none;
 }
+
+

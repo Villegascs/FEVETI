@@ -73,9 +73,9 @@ function initHeroAnimation() {
             const words = part.trim().split(/\s+/);
             words.forEach((word, wordIdx) => {
                 if (!word) return;
-                
+
                 newHtml += `<span class="gsap-word">`;
-                
+
                 // Split each word into characters
                 const chars = word.split('');
                 chars.forEach(char => {
@@ -83,7 +83,7 @@ function initHeroAnimation() {
                 });
 
                 newHtml += `</span>`;
-                
+
                 // Add space after word if it's not the last one
                 if (wordIdx < words.length - 1) {
                     newHtml += ' ';
@@ -127,7 +127,7 @@ function initResultsAccordion() {
         }
 
         // Usamos onclick en lugar de addEventListener para evitar que se ejecute dos veces y se anule
-        header.onclick = function() {
+        header.onclick = function () {
             if (item.classList.contains('active')) {
                 item.classList.remove('active');
                 content.style.maxHeight = null; // Quita el max-height inline para que la transición CSS cierre
@@ -145,14 +145,14 @@ initResultsAccordion();
 // ============================================
 // MOBILE NAVIGATION SYSTEM
 // ============================================
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const menuBtn = document.querySelector('.mobile-menu-btn');
     const nav = document.querySelector('nav');
 
     if (!menuBtn || !nav) return;
 
     // Toggle open/close on hamburger click
-    menuBtn.addEventListener('click', function(e) {
+    menuBtn.addEventListener('click', function (e) {
         e.stopPropagation(); // prevent body click from immediately closing it
         nav.classList.toggle('nav-active');
         const icon = menuBtn.querySelector('i');
@@ -163,7 +163,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Close menu when clicking outside
-    document.addEventListener('click', function(e) {
+    document.addEventListener('click', function (e) {
         if (nav.classList.contains('nav-active') &&
             !nav.contains(e.target) &&
             !menuBtn.contains(e.target)) {
@@ -197,3 +197,4 @@ if (typeof Lenis !== 'undefined') {
 
     requestAnimationFrame(raf);
 }
+
