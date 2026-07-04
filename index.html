@@ -10,13 +10,15 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="Logos/logo_Federación venezolana de tiro-01.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preload" as="image" href="Fotos/_DSC8237_comprimida.webp">
+    <link rel="preload" as="image" href="Logos/logo_Federación venezolana de tiro-01.webp">
 </head>
 
 <body class="home-page">
 
     <header>
         <a href="index.html" class="logo-container" style="text-decoration: none; color: inherit;">
-            <img src="Logos/logo_Federación venezolana de tiro-01.png" alt="Logo FEVETI">
+            <img src="Logos/logo_Federación venezolana de tiro-01.webp" alt="Logo FEVETI" decoding="async">
             <h1>Federación Venezolana <br> de Tiro</h1>
         </a>
         <nav>
@@ -36,7 +38,7 @@
 
     <main>
         <section class="hero">
-            <img src="Fotos/_DSC8237_comprimida.webp" alt="Deportista disparando" class="hero-img">
+            <img src="Fotos/_DSC8237_comprimida.webp" alt="Deportista disparando" class="hero-img" fetchpriority="high" decoding="async">
             <div class="hero-overlay"></div>
             <div class="hero-content">
                 <h2>Federación Venezolana de Tiro</h2>
@@ -218,7 +220,7 @@
                 <!-- Modalidades de Campo -->
                 <a href="modalidades-de-campo.html" class="modalidad-card reveal-item">
                     <div class="modalidad-img-wrapper">
-                        <img src="Portadas/Portada Modalidades de Campo.jpg" alt="Modalidades de Campo">
+                        <img src="Portadas/Portada Modalidades de Campo.webp" alt="Modalidades de Campo" loading="lazy" decoding="async">
                     </div>
                     <div class="modalidad-info">
                         <div class="modalidad-date">15 ABRIL 2013</div>
@@ -229,7 +231,7 @@
                 <!-- Tiro Policial NRA -->
                 <a href="tiro-policial-nra.html" class="modalidad-card reveal-item">
                     <div class="modalidad-img-wrapper">
-                        <img src="Portadas/Portada Tiro Policial.jpg" alt="Tiro Policial N.R.A.">
+                        <img src="Portadas/Portada Tiro Policial.webp" alt="Tiro Policial N.R.A." loading="lazy" decoding="async">
                     </div>
                     <div class="modalidad-info">
                         <div class="modalidad-date">15 ABRIL 2013</div>
@@ -240,7 +242,7 @@
                 <!-- Tiro Deportivo Defensivo -->
                 <a href="tiro-deportivo-defensivo.html" class="modalidad-card reveal-item">
                     <div class="modalidad-img-wrapper">
-                        <img src="Portadas/Portada Tiro Deportivo Defensivo.jpeg" alt="Tiro Deportivo Defensivo">
+                        <img src="Portadas/Portada Tiro Deportivo Defensivo.webp" alt="Tiro Deportivo Defensivo" loading="lazy" decoding="async">
                     </div>
                     <div class="modalidad-info">
                         <div class="modalidad-date">15 ABRIL 2013</div>
@@ -251,7 +253,7 @@
                 <!-- Rimfire & Air Rifle Benchrest -->
                 <a href="rimfire-air-rifle-benchrest.html" class="modalidad-card reveal-item">
                     <div class="modalidad-img-wrapper">
-                        <img src="Portadas/Portada Rimfire.jpg" alt="Rimfire & Air Rifle Benchrest">
+                        <img src="Portadas/Portada Rimfire.webp" alt="Rimfire & Air Rifle Benchrest" loading="lazy" decoding="async">
                     </div>
                     <div class="modalidad-info">
                         <div class="modalidad-date">30 MARZO 2013</div>
